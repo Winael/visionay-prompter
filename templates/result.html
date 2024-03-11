@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Généré</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h3>Prompt Généré</h3>
+        <div class="card">
+            <div class="card-content">
+                <p>{{ prompt }}</p>
+            </div>
+            <div class="card-action">
+                <a href="/" class="waves-effect waves-light btn">Créer un autre prompt</a>
+                <button class="btn waves-effect waves-light" onclick="copyPrompt()">Copier</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Copy Prompt Function -->
+    <script>
+        function copyPrompt() {
+            navigator.clipboard.writeText('{{ prompt }}').then(function() {
+                M.toast({html: 'Prompt copié !'});
+            }, function(err) {
+                console.error('Impossible de copier le prompt: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

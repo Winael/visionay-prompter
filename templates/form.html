@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Création de Prompt pour Stable-Diffusion</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Materialize JS (for select and other components initialization) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Création de Prompt pour Stable-Diffusion XL</h2>
+        <form action="/generate" method="post">
+            <div class="row">
+                
+                <div class="input-field col s12">
+                    <input type="text" id="subject" name="subject" class="validate">
+                    <label for="subject">Sujet</label>
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+                        <ul class="tabs">
+                            {% for tab_name in tab_categories.keys() %}
+                            <li class="tab col s2">
+                                <a href="#{{ tab_name | replace(' ', '_') | replace('è', 'e') | replace('é', 'e') | lower }}"> <!-- Correction ici -->
+                                    {{ tab_name }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% for tab_name, option_keys in tab_categories.items() %}
+                    <div id="{{ tab_name | replace(' ', '_') | replace('è', 'e') | replace('é', 'e') | lower }}" class="col s12"> <!-- Correction ici -->
+                        {% for option_key in option_keys %}
+                        <div class="input-field col s12">
+                            <select name="{{ option_key }}" id="{{ option_key }}" {% if option_key in ['effects', 'accessories'] %}multiple{% endif %}>
+                                <option value="" disabled selected>Choose your option</option>
+                                {% for value in options[option_key] %}
+                                <option value="{{ value }}">{{ value }}</option>
+                                {% endfor %}
+                            </select>
+                            <input type="text" id="{{option_key}}_other" name="{{option_key}}_other" style="display:none;" placeholder="Précisez">
+                            <label for="{{ option_key }}">{{ option_key.replace('_', ' ').title() }}</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <p class="range-field">
+                                <label for="weight">Poids</label>
+                                <input type="range" id="{{option_key}}_weight" name="{{option_key}}_weight" min="0" max="2" step="0.1" value="1">
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+                
+                <div class="input-field col s12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Générer Prompt</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Initialization script for Materialize components -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elemsTabs = document.querySelectorAll('.tabs');
+            var options = { swipeable: true };
+            var instancesTabs = M.Tabs.init(elemsTabs);
+            var elemsSelect = document.querySelectorAll('select');
+            M.FormSelect.init(elemsSelect);
+    
+            elemsSelect.forEach(function(elem) {
+                elem.onchange = function() {
+                    // Obtenir l'identifiant du champ texte "other" correspondant
+                    var otherInputId = this.id + '_other';
+                    var otherInput = document.getElementById(otherInputId);
+    
+                    // Afficher le champ texte "other" si l'option "Other" est sélectionnée
+                    if (this.value === "Other") {
+                        otherInput.style.display = 'block';
+                    } else {
+                        otherInput.style.display = 'none';
+                    }
+                };
+            });
+        });
+    </script>      
+    
+</body>
+</html>

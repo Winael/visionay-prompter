@@ -1,0 +1,30 @@
+{
+    "body_position": [
+        "Standing straight (Confidence)",
+        "Sitting relaxed (Casualness)",
+        "Leaning forward (Interest or Engagement)",
+        "Arms crossed (Defensiveness or Comfort)",
+        "Hands on hips (Readiness or Aggression)",
+        "Slouching (Disinterest or Fatigue)",
+        "Hands clasped behind back (Thoughtfulness or Authority)",
+        "Head tilted (Curiosity or Confusion)",
+        "Lying down (Rest or Vulnerability)",
+        "Kneeling (Submission or Proposing)",
+        "Running pose (Haste or Excitement)",
+        "Jumping (Joy or Triumph)",
+        "Dancing (Elation or Celebration)",
+        "Yoga pose (Tranquility or Focus)",
+        "Martial arts stance (Preparedness or Defense)",
+        "Bowing (Respect or Gratitude)",
+        "Reaching out (Desire or Need)",
+        "Pointing (Direction or Accusation)",
+        "Waving (Greeting or Farewell)",
+        "Covering face (Shame or Distress)",
+        "Fist raised (Defiance or Solidarity)",
+        "Clapping (Appreciation or Encouragement)",
+        "Hugging self (Comfort or Coldness)",
+        "Finger on lips (Secrecy or Request for Silence)",
+        "Saluting (Respect or Obedience)",
+        "Other (Specify)"
+    ]
+}

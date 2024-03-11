@@ -1,0 +1,22 @@
+{
+    "effects": [
+        "Ray-Tracing Lighting and Reflection (Realistic lighting and reflection effects)",
+        "Bokeh (Blurry effect on out-of-focus areas)",
+        "HDR (High Dynamic Range for greater detail in light and dark areas)",
+        "Color Grading (Enhanced color correction for mood setting)",
+        "Film Grain (Adds a film-like texture and warmth)",
+        "Vignette (Darkening of corners for focus on the center)",
+        "Lens Flare (Simulated flare effect from bright light sources)",
+        "Tilt-Shift (Miniature effect with selective focus)",
+        "Bloom (Glow effect on bright areas of the image)",
+        "Motion Blur (Blurred effect suggesting movement)",
+        "Chromatic Aberration (Color fringing around edges)",
+        "Depth of Field (Selective focus area with blur effect on the rest)",
+        "Infrared Photography Effect (Surreal landscapes with altered colors)",
+        "Double Exposure (Combining two or more exposures into one image)",
+        "Cross Processing (Altered colors for a retro effect)",
+        "Sepia Tone (Warm brown monochrome color scheme)",
+        "Black and White (Classic monochrome effect)",
+        "Other (Specify)"
+    ]
+}

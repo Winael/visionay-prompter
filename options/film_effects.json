@@ -1,0 +1,26 @@
+{
+    "film_effects": [
+        "Kodak Portra 400 (Natural Color)",
+        "Fujifilm Velvia 50 (Vivid Color)",
+        "Ilford HP5 Plus 400 (Black and White)",
+        "Kodak Tri-X 400 (Grainy Black and White)",
+        "AgfaPhoto Vista Plus 200 (Saturated Color)",
+        "Cinestill 800T (Tungsten Balanced Color)",
+        "Lomography Color Negative 800 (High Contrast Color)",
+        "Kodak T-Max 100 (Fine Grain Black and White)",
+        "Fujifilm Provia 100F (Neutral Color)",
+        "Ilford Delta 3200 (High ISO Black and White)",
+        "Kodak Ektar 100 (Ultra Fine Grain Color)",
+        "Polaroid Originals (Instant Film Effect)",
+        "Cross Processed (Altered Color Balance)",
+        "Redscale (Reddish Color Shift)",
+        "Infrared (Surreal Black and White)",
+        "Expired Film (Unpredictable Color Shifts)",
+        "Push Processing (Increased Contrast and Grain)",
+        "Pull Processing (Decreased Contrast)",
+        "Bleach Bypass (Desaturated, High Contrast)",
+        "Sepia Tone (Warm Brown Monochrome)",
+        "Cyanotype (Blue Monochrome)",
+        "Other (Specify)"
+    ]
+}

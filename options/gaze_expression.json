@@ -1,0 +1,30 @@
+{
+    "gaze_expression": [
+        "Direct Gaze (Confidence)",
+        "Averted Gaze (Shyness or Avoidance)",
+        "Downcast Eyes (Sadness or Guilt)",
+        "Looking Up (Hopefulness or Thinking)",
+        "Intense Stare (Anger or Intensity)",
+        "Soft Gaze (Affection or Tenderness)",
+        "Wide-eyed (Surprise or Fear)",
+        "Narrowed Eyes (Suspicion or Scrutiny)",
+        "Sidelong Glance (Curiosity or Distrust)",
+        "Glazed Over (Disinterest or Boredom)",
+        "Eyes Darting (Anxiety or Nervousness)",
+        "Focused Gaze (Concentration)",
+        "Blinking Slowly (Contentment or Trust)",
+        "Tearful Eyes (Sadness or Joy)",
+        "Squinting (Doubt or Critical Evaluation)",
+        "Rolling Eyes (Disdain or Annoyance)",
+        "Sparkling Eyes (Excitement or Happiness)",
+        "Eyes Closed Briefly (Frustration or Disappointment)",
+        "Gazing into Distance (Reflection or Loneliness)",
+        "Eyebrows Raised while Looking (Incredulity or Surprise)",
+        "Looking Over Glasses (Judgment or Skepticism)",
+        "Peeking through Lashes (Seduction or Playfulness)",
+        "Eyes Widening Gradually (Realization or Understanding)",
+        "Fixed Gaze (Hypnotic Influence or Deep Focus)",
+        "Cross-eyed (Humor or Silliness)",
+        "Other (Specify)"
+    ]
+}
