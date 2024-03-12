@@ -35,7 +35,7 @@
                     {% for tab_name, option_keys in tab_categories.items() %}
                     <div id="{{ tab_name | replace(' ', '_') | replace('è', 'e') | replace('é', 'e') | lower }}" class="col s12"> <!-- Correction ici -->
                         {% for option_key in option_keys %}
-                        <div class="input-field col s12">
+                        <div class="input-field col s2">
                             <select name="{{ option_key }}" id="{{ option_key }}" {% if option_key in ['effects', 'accessories'] %}multiple{% endif %}>
                                 <option value="" disabled selected>Choose your option</option>
                                 {% for value in options[option_key] %}
@@ -46,7 +46,7 @@
                             <label for="{{ option_key }}">{{ option_key.replace('_', ' ').title() }}</label>
                         </div>
 
-                        <div class="input-field col s12">
+                        <div class="input-field col s2">
                             <p class="range-field">
                                 <label for="weight">Poids</label>
                                 <input type="range" id="{{option_key}}_weight" name="{{option_key}}_weight" min="0" max="2" step="0.1" value="1">
